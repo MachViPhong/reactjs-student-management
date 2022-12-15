@@ -4,37 +4,40 @@ import React, { Component } from "react";
 import TableSinhVien from "./TableSinhVien";
 
 export default class QuanLySinhVien extends Component {
-  state = {
-    formValue: {
-      maSV: "",
-      hoTen: "",
-      soDienThoai: "",
-      email: "",
-    },
-    formError: {
-      maSV: "",
-      hoTen: "",
-      soDienThoai: "",
-      email: "",
-    },
-    arrSinhVien: [
-      {
-        maSV: "19120617",
-        hoTen: "Mạch Vi Phong",
-        soDienThoai: "0979161290",
-        email: "machviphong21041001@gmail.com",
+  constructor(props) {
+    super(props);
+    this.state = {
+      formValue: {
+        maSV: "",
+        hoTen: "",
+        soDienThoai: "",
+        email: "",
       },
-      {
-        maSV: "19120618",
-        hoTen: "Mạch Đình Phong",
-        soDienThoai: "0773924972",
-        email: "machdinhphong2104@gmail.com",
+      formError: {
+        maSV: "",
+        hoTen: "",
+        soDienThoai: "",
+        email: "",
       },
-    ],
-    valid: false,
-    keyword: "",
-    arrSVTemp: [],
-  };
+      arrSinhVien: [
+        {
+          maSV: "19120617",
+          hoTen: "Mạch Vi Phong",
+          soDienThoai: "0979161290",
+          email: "machviphong21041001@gmail.com",
+        },
+        {
+          maSV: "19120618",
+          hoTen: "Mạch Đình Phong",
+          soDienThoai: "0773924972",
+          email: "machdinhphong2104@gmail.com",
+        },
+      ],
+      valid: false,
+      keyword: "",
+      arrSVTemp: [],
+    };
+  }
 
   handleSubmit = (e) => {
     e.preventDefault();
